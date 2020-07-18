@@ -32,7 +32,6 @@ function Graph(props: IUserInput) {
                 }
 
                 setApiResponse(resObjArray);
-                console.log(apiResponse);
             });
     }, [props.searchQuery]);
 

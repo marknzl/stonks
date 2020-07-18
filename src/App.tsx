@@ -18,10 +18,10 @@ function App() {
       <Searchbar setSearchQueryInput={(i: IUserInput) => setSearchQuery(i.searchQuery)}/>
       <Grid container spacing={5}>
         <Grid item xs={4}>
-          <StockInfo />
+          <Graph searchQuery={searchQuery}/>
         </Grid>
         <Grid item xs={4}>
-          <Graph searchQuery={searchQuery}/>
+          <StockInfo searchQuery={searchQuery}/>
         </Grid>
       </Grid>
     </div>

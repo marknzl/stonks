@@ -4,7 +4,7 @@ import ISearchbarProps from '../shared/ISearchbarProps';
 
 function Searchbar(props: ISearchbarProps) {
     const [searchQuery, setSearchQuery] = useState<string | null>("");
-    const [hasFocus, setHasFocus] = useState<boolean>(false);
+    //const [hasFocus, setHasFocus] = useState<boolean>(false);
     
     useEffect(() => {
         props.setSearchQueryInput({searchQuery: searchQuery});
@@ -22,7 +22,6 @@ function Searchbar(props: ISearchbarProps) {
                             required
                             label="Enter stock ticker"
                             variant="outlined"
-                            onClick={() => setHasFocus(true)}
                             onChange={e => setSearchQuery(e.target.value)}
                             fullWidth
                     ></TextField>
