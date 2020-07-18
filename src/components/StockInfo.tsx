@@ -8,7 +8,11 @@ function StockInfo(props: IUserInput) {
 
     useEffect(() => {
         setSearchQuery(props.searchQuery);
-        fetch(`https://sandbox.iexapis.com/stable/stock/${props.searchQuery}/company?token=${process.env.REACT_APP_API_KEY}`)
+
+        // if (searchQuery === "")
+        //     return
+
+        fetch(`https://sandbox.iexapis.com/stable/stock/${props.searchQuery}/company?token=${process.env.REACT_APP_SANDBOX_API_KEY}`)
             .then(response => response.json())
             .then(response => {
                 let profile: ICompanyProfileResponse = {

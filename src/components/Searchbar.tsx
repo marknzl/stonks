@@ -1,14 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import { Grid, TextField } from '@material-ui/core';
+import { Grid, TextField, Button } from '@material-ui/core';
 import ISearchbarProps from '../shared/ISearchbarProps';
 
 function Searchbar(props: ISearchbarProps) {
     const [searchQuery, setSearchQuery] = useState<string | null>("");
-    //const [hasFocus, setHasFocus] = useState<boolean>(false);
     
-    useEffect(() => {
+    // useEffect(() => {
+    //     props.setSearchQueryInput({searchQuery: searchQuery});
+    // }, [searchQuery]);
+
+    const handleSubmit = () => {
         props.setSearchQueryInput({searchQuery: searchQuery});
-    }, [searchQuery]);
+    }
 
     return (
         <div>
@@ -27,7 +30,7 @@ function Searchbar(props: ISearchbarProps) {
                     ></TextField>
                 </Grid>
                 <Grid item xs={4}>
-                    {/* <Button variant="outlined" color="primary">Search</Button> */}
+                    <Button variant="outlined" color="primary" onClick={handleSubmit}>Search</Button>
                 </Grid>
             </Grid>
             

@@ -15,7 +15,10 @@ function Graph(props: IUserInput) {
     useEffect(() => {
         setSearchQuery(props.searchQuery);
 
-        fetch(`https://sandbox.iexapis.com/stable/stock/${props.searchQuery}/chart/1m?token=${process.env.REACT_APP_API_KEY}`)
+        // if (searchQuery === "")
+        //     return;
+
+        fetch(`https://sandbox.iexapis.com/stable/stock/${props.searchQuery}/chart/1m?token=${process.env.REACT_APP_SANDBOX_API_KEY}`)
             .then(response => response.json())
             .then(response => {
                 let resObjArray: IGraphResponse[] = [];

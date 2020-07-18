@@ -4,6 +4,7 @@ import Graph from './components/Graph';
 import StockInfo from './components/StockInfo';
 import { Grid } from '@material-ui/core';
 import IUserInput from './shared/IUserInput';
+import NewsFeed from './components/NewsFeed';
 require('dotenv').config();
 
 function App() {
@@ -22,6 +23,9 @@ function App() {
         </Grid>
         <Grid item xs={4}>
           <StockInfo searchQuery={searchQuery}/>
+        </Grid>
+        <Grid item xs={4}>
+          <NewsFeed searchQuery={searchQuery}/>
         </Grid>
       </Grid>
     </div>
