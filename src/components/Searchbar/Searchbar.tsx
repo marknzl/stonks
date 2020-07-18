@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Grid, TextField, Button } from '@material-ui/core';
-import ISearchbarProps from '../shared/ISearchbarProps';
+import ISearchbarProps from '../../shared/ISearchbarProps';
 
 function Searchbar(props: ISearchbarProps) {
     const [searchQuery, setSearchQuery] = useState<string | null>("");

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import IUserInput from '../shared/IUserInput';
-import ICompanyProfileResponse from '../shared/ICompanyProfileResponse';
+import IUserInput from '../../shared/IUserInput';
+import ICompanyProfileResponse from '../../shared/ICompanyProfileResponse';
 
 function StockInfo(props: IUserInput) {
     const [searchQuery, setSearchQuery] = useState<string | null>("");

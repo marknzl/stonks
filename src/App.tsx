@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import Searchbar from './components/Searchbar';
-import Graph from './components/Graph';
-import StockInfo from './components/StockInfo';
+import Searchbar from './components/Searchbar/Searchbar';
+import Graph from './components/Graph/Graph';
+import StockInfo from './components/CompanyProfile/CompanyProfile';
 import { Grid } from '@material-ui/core';
 import IUserInput from './shared/IUserInput';
-import NewsFeed from './components/NewsFeed';
+import NewsFeed from './components/NewsFeed/NewsFeed';
 require('dotenv').config();
 
 function App() {
@@ -20,6 +20,7 @@ function App() {
       <Grid container spacing={5}>
         <Grid item xs={4}>
           <Graph searchQuery={searchQuery}/>
+
         </Grid>
         <Grid item xs={4}>
           <StockInfo searchQuery={searchQuery}/>

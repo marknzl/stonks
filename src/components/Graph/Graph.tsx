@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
-import IUserInput from '../shared/IUserInput';
-import IGraphResponse from '../shared/IGraphResponse';
+import IUserInput from '../../shared/IUserInput';
+import IGraphResponse from '../../shared/IGraphResponse';
 
 function Graph(props: IUserInput) {
     const [searchQuery, setSearchQuery] = useState<string | null>("");

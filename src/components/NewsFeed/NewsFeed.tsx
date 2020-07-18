@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import IUserInput from '../shared/IUserInput';
+import IUserInput from '../../shared/IUserInput';
 import { GridList, GridListTile, ListSubheader, GridListTileBar } from '@material-ui/core';
-import IArticle from '../shared/IArticle';
+import IArticle from '../../shared/IArticle';
 import './NewsFeed.css';
 
 function NewsFeed(props: IUserInput) {
@@ -10,7 +10,6 @@ function NewsFeed(props: IUserInput) {
 
     useEffect(() => {
         setSearchQuery(props.searchQuery);
-        console.log(props.searchQuery);
         fetch(`https://newsapi.org/v2/everything?q=$${props.searchQuery}&apiKey=${process.env.REACT_APP_NEWS_API_KEY}`)
             .then(response => response.json())
             .then(response => {
@@ -33,13 +32,13 @@ function NewsFeed(props: IUserInput) {
             });
     }, [props.searchQuery]);
 
-    if (props.searchQuery !== "" && articles != null) {
+    if (searchQuery !== "" && articles != null) {
         return (
             <div>
                 <h2>News:</h2>
                 <GridList>
                     <GridListTile key="Subheader" cols={3} style={{height: 'auto'}}>
-                        <ListSubheader component="div">Feed for {props.searchQuery}</ListSubheader>
+                        <ListSubheader component="div">Feed for {searchQuery}</ListSubheader>
                     </GridListTile>
                     {articles.map((tile) => (
                         <GridListTile key={tile.imageUrl}>
