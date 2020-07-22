@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
 import IUserInput from '../../shared/IUserInput';
 import IGraphResponse from '../../shared/IGraphResponse';
+import './Graph.css';
 
 function Graph(props: IUserInput) {
     const [searchQuery, setSearchQuery] = useState<string | null>("");
@@ -40,7 +41,8 @@ function Graph(props: IUserInput) {
 
     if (searchQuery !== "") {
         return (
-            <div>
+            <div className="GraphContainer">
+                <h2 className="ClosingTitle">30-day closing prices for {searchQuery?.toUpperCase()}</h2>
                 <LineChart width={600} height={400} data={apiResponse}
                     margin={{top: 5, right: 30, left: 20, bottom: 5}}>
                     <XAxis dataKey="label"/>

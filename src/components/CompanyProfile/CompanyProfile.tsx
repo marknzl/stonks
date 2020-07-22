@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import IUserInput from '../../shared/IUserInput';
 import ICompanyProfileResponse from '../../shared/ICompanyProfileResponse';
+import './CompanyProfile.css';
 
 function StockInfo(props: IUserInput) {
     const [searchQuery, setSearchQuery] = useState<string | null>("");
@@ -8,9 +9,6 @@ function StockInfo(props: IUserInput) {
 
     useEffect(() => {
         setSearchQuery(props.searchQuery);
-
-        // if (searchQuery === "")
-        //     return
 
         fetch(`https://sandbox.iexapis.com/stable/stock/${props.searchQuery}/company?token=${process.env.REACT_APP_SANDBOX_API_KEY}`)
             .then(response => response.json())

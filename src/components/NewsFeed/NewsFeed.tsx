@@ -34,16 +34,16 @@ function NewsFeed(props: IUserInput) {
 
     if (searchQuery !== "" && articles != null) {
         return (
-            <div>
-                <h2>News:</h2>
+            <div className="NewsFeedContainer">
+                <h2>Latest news:</h2>
                 <GridList>
-                    <GridListTile key="Subheader" cols={3} style={{height: 'auto'}}>
+                    {/* <GridListTile key="Subheader" cols={3} style={{height: 'auto'}}>
                         <ListSubheader component="div">Feed for {searchQuery}</ListSubheader>
-                    </GridListTile>
+                    </GridListTile> */}
                     {articles.map((tile) => (
                         <GridListTile key={tile.imageUrl}>
                             <a href={tile.url} target="_blank">
-                                <img src={tile.imageUrl}></img>
+                                <img className="NewsImage" src={tile.imageUrl}></img>
                             </a>
                             <GridListTileBar
                                 title={<a href={tile.url} target="_blank">{tile.title}</a>}
