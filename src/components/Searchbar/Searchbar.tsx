@@ -37,7 +37,7 @@ function Searchbar(props: ISearchbarProps) {
                 <Grid item xs={4}>
                     <TextField
                             required
-                            label="Enter stock ticker"
+                            label="Enter stock symbol"
                             variant="outlined"
                             onChange={e => setSearchQuery(e.target.value)}
                             fullWidth
