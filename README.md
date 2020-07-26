@@ -19,4 +19,9 @@ API keys for both services are located within the `.env.local` file in the proje
  - **`REACT_APP_NEWS_API_KEY`**: API key for NewsAPI.org 
 
 # Screenshots
-(coming soon)
+
+![MSFT](/screenshots/MSFT.JPG?raw=true "MSFT")
+
+![MSFT Closing Prices](/screenshots/MSFT_Closing.JPG?raw=true "MSFT Closing Prices")
+
+![AAPL](/screenshots/AAPL.JPG?raw=true "AAPL")
